@@ -1,0 +1,7 @@
+
+*.pyc
+*.pyo
+
+.idea/*
+local.db
+.DS_Store

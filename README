@@ -1,0 +1,21 @@
+
+django-mobile-views is a simple app to help detect mobile browsers
+and serve a different template for them.
+
+It works by inspecting the user agent.
+
+
+To use, either use one of the mobile generic views, or add the MobileMixin
+to your class based view.
+
+from mobile_views.generic_views import MobileTemplateView
+
+class HomePage(MobileTemplateView):
+    template_name = 'myapp/home_page.html'
+    mobile_template_name = 'myapp/mobile_home_page.html'
+
+
+And that's it!
+
+There is also a 'FullSiteView' provided that when accessed will set a cookie
+to prevent being served the mobile template. The cookie lasts until browser close.
